@@ -7,6 +7,7 @@ public class App {
         sol.task04();
         sol.task05();
         sol.task06();
+        sol.szetvalogat();
 
         
     }

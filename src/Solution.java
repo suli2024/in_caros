@@ -77,7 +77,31 @@ public class Solution {
 
   public void kiirLista(ArrayList<Car> list) {
     for(Car car: list) {
-      System.out.println(car.getPlate() + " " + car.getBrand());
+      System.out.printf(
+        "%s %s %.2f\n",
+        car.getPlate(),
+        car.getBrand(),
+        car.getPrice()
+        );
     }
+  }
+
+  public void szetvalogat() {
+    System.out.println("----------------");
+    System.out.println("Szétválogatás");
+    ArrayList<Car> dragaLista = new ArrayList<>();
+    ArrayList<Car> olcsoLista = new ArrayList<>();
+
+    for(Car car: carList) {
+      if(car.getPrice() >=1000) {
+        dragaLista.add(car);
+      }else {
+        olcsoLista.add(car);
+      }
+    }
+    System.out.println("Drágák:");
+    kiirLista(dragaLista);
+    System.out.println("Olcsók: ");
+    kiirLista(olcsoLista);
   }
 }
